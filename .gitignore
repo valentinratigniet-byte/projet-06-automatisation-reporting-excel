@@ -1,0 +1,6 @@
+# Rapports datés (régénérés) — on garde un exemple versionné
+output/rapport_ventes_*.xlsx
+
+# Python
+__pycache__/
+.venv/
