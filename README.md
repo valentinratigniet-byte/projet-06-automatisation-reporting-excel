@@ -7,6 +7,17 @@
 
 ## 📊 Ce qui est produit
 
+```mermaid
+flowchart LR
+    PG[("PostgreSQL<br/>Projet 07")] -->|extraction| PY["generate_report.py<br/>openpyxl"]
+    PY --> XLSX[("Classeur Excel<br/>4 feuilles, graphiques natifs")]
+    SCHED["Planificateur<br/>Windows / cron"] -.->|1×/semaine| PY
+    UI["App Streamlit<br/>bouton Générer"] -.-> PY
+
+    style XLSX fill:#137A8B,color:#fff
+    style PG fill:#E4A93C,color:#1a1a1a
+```
+
 Un classeur Excel **mis en forme par le code** (`output/exemple_rapport_ventes.xlsx`),
 4 feuilles :
 
