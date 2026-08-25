@@ -75,5 +75,5 @@ projet-06-automatisation-reporting-excel/
 
 ---
 
-*Projet 06 du [Portfolio Data](../). Automatiser une corvée récurrente et **chiffrer
+*Projet 06 du [Portfolio Data](https://github.com/valentinratigniet-byte). Automatiser une corvée récurrente et **chiffrer
 le temps gagné** — l'impact business le plus tangible.*
