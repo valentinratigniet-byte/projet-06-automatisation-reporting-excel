@@ -1,5 +1,7 @@
 # Projet 06 — Automatisation d'un reporting Excel
 
+[![CI](https://github.com/valentinratigniet-byte/projet-06-automatisation-reporting-excel/actions/workflows/ci.yml/badge.svg)](https://github.com/valentinratigniet-byte/projet-06-automatisation-reporting-excel/actions/workflows/ci.yml)
+
 > Beaucoup d'équipes refont **chaque semaine le même rapport Excel à la main**. Ce
 > projet supprime la corvée : un script régénère le rapport tout seul — mis en forme,
 > avec KPIs et graphiques — planifiable, avec une mini-interface. **Impact concret :
