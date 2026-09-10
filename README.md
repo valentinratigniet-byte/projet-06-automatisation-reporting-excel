@@ -11,9 +11,9 @@
 
 ```mermaid
 flowchart LR
-    PG[("PostgreSQL<br/>Projet 07")] -->|extraction| PY["generate_report.py<br/>openpyxl"]
+    PG[("PostgreSQL<br/>Projet 07")] -- "extraction" --> PY["generate_report.py<br/>openpyxl"]
     PY --> XLSX[("Classeur Excel<br/>4 feuilles, graphiques natifs")]
-    SCHED["Planificateur<br/>Windows / cron"] -.->|1×/semaine| PY
+    SCHED["Planificateur<br/>Windows / cron"] -. "1×/semaine" .-> PY
     UI["App Streamlit<br/>bouton Générer"] -.-> PY
 
     style XLSX fill:#137A8B,color:#fff
