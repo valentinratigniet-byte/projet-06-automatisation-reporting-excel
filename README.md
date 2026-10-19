@@ -7,6 +7,8 @@
 > avec KPIs et graphiques — planifiable, avec une mini-interface. **Impact concret :
 > ~38 heures/an rendues aux équipes.**
 
+🗺️ **[Schéma du dépôt (GitDiagram)](https://gitdiagram.com/valentinratigniet-byte/projet-06-automatisation-reporting-excel)** : vue d'ensemble générée automatiquement à partir du code.
+
 ## 📊 Ce qui est produit
 
 ```mermaid
