@@ -68,9 +68,11 @@ def main() -> None:
     cur.close(); conn.close()
 
     ca_total, nb_cmd, panier = float(kpis[0]), int(kpis[1]), float(kpis[2])
+    # Croissance sur les deux derniers mois COMPLETS : le mois en cours, inachevé, ferait chuter le chiffre.
+    complets = [m for m in mensuel if m[0] < date.today().strftime("%Y-%m")]
     mom = None
-    if len(mensuel) >= 2 and mensuel[-2][1]:
-        mom = 100.0 * float(mensuel[-1][1] - mensuel[-2][1]) / float(mensuel[-2][1])
+    if len(complets) >= 2 and complets[-2][1]:
+        mom = 100.0 * float(complets[-1][1] - complets[-2][1]) / float(complets[-2][1])
 
     wb = Workbook()
 
@@ -84,7 +86,7 @@ def main() -> None:
     cards = [("Chiffre d'affaires", ca_total, EURO),
              ("Commandes", nb_cmd, '#,##0'),
              ("Panier moyen", panier, '#,##0.00" €"'),
-             ("Croissance dernier mois", (mom / 100 if mom is not None else None), '0.0%')]
+             ("Croissance dernier mois complet", (mom / 100 if mom is not None else None), '0.0%')]
     for i, (label, val, fmt) in enumerate(cards):
         col = 2 + i * 2
         lc = ws.cell(row=5, column=col, value=label)
